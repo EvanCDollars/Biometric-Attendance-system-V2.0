@@ -1,5 +1,12 @@
 <?php
+
+if ( session.status() == PHP_SESSION_ACTIVE){
+  //pass
+}
+else{
 session_start();
+}
+
 if (!isset($_SESSION['Admin-name'])) {
   header("location: login.php");
 }
